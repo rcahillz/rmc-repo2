@@ -1,0 +1,15 @@
+jobs:
+- name: my-repo
+  plan:
+  - get: rmc-repo2
+    trigger: true
+  - task: task-list-resources
+    file:  rmc-repo2/tasks/task-list-resources.yml
+
+resources:
+- name: rmc-repo2
+  type: git
+  source:
+    uri: https://github.com/rcahillz/rmc-repo2.git
+    branch: master
+
