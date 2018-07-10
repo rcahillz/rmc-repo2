@@ -6,8 +6,8 @@ image_resource:
   source: {repository: busybox}
 
 inputs:
-- name: my-repo
+- name: rmc-repo2
 
 run:
   path: ls
-  args: [-ltr]
+  args: [-l+R]
